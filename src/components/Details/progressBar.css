@@ -1,0 +1,28 @@
+.progressBar{
+    min-height: 40px;
+    width: 50%;
+}
+.wrapper {
+    border: none;
+  
+  }
+  
+ .container .div{
+    background-color: pink;
+    border-radius: 4px;
+    height: 4px;
+    
+    
+  }
+  
+  .barCompleted {
+    background-color: rgb(88, 202, 240);
+    border-radius: 4px;
+    width: 80%;
+    height: 18px;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: rgb(244, 248, 244);
+  }

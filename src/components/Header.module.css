@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 4vh;
+    background-color: rgb(55, 47, 47);
+}
+
+.title{
+    color:#fff;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    padding: 5px 0px 5px 30px
+}
+.logOutButton{
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(55, 47, 47);
+    margin-right: 20px;
+    text-align: center;
+    padding:3px 10px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.logOutButton:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(55, 47, 47);
+    margin-right: 20px;
+    text-align: center;
+    padding:3px 10px;
+    border: 0.5px solid white;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 14px;
+}

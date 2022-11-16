@@ -1,0 +1,7 @@
+.taskDetailsContainer{
+    width: 47%;
+    height: 96vh;
+    overflow:scroll;
+    background-color: rgb(237, 235, 235);
+    border: 1px solid rgb(222, 221, 221);
+}

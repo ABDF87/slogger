@@ -1,0 +1,148 @@
+/* .projectItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(178, 177, 177);
+  max-width: 100%;
+  margin-bottom: 20px;
+} */
+.projectItem {
+  background-color: rgb(237, 235, 235);
+}
+/* .projectButton {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(213, 216, 213);
+} */
+
+.projectButton:hover {
+  cursor: pointer;
+  background-color: rgb(225, 223, 223);
+  z-index: 1;
+}
+
+.changeProjectNameButton,
+.deliteProjectButton,
+.ProjectDoneButton {
+  
+  cursor: pointer;
+  margin-left: 5px;
+  background-color: transparent;
+  
+}
+.changeProjectNameButton:hover {
+  color: rgb(9, 2, 226);
+}
+.deliteProjectButton:hover {
+  color: rgb(255, 0, 0);
+}
+.ProjectDoneButton:hover {
+  color: rgb(10, 105, 3);
+}
+
+.inputProjectName {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color:transparent;
+  cursor: auto;
+}
+
+.inputProjectName::placeholder {
+  font-size: 16px;
+}
+
+.projectNameItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 5px 8px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(170, 168, 170);
+  color:aliceblue;
+  position: relative
+}
+.projectNameItemActive {
+  margin-left: 10px;
+  color:rgb(61, 60, 60);
+  transition: 500ms;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 5px 9px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(213, 216, 213);
+
+}
+
+.ProjectNameDoneIcon {
+  color: rgb(28, 29, 28);
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  z-index: 5;
+}
+
+.ProjectNameDoneIcon:hover {
+  color: rgb(87, 87, 87);
+}
+.ProjectNameDoneIconDisabled{
+  color: rgb(219, 34, 219);
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-right: 10px;;
+}
+
+.deleteContainer{
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  color:rgb(248, 248, 248);
+  transition: 500ms;
+
+  margin-bottom: 5px;
+  width: 90%;
+  font-size: 16px;
+  padding: 10px 5px 9px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(60, 59, 59);
+}
+
+
+
+.deleteContainer button {
+  padding: 0 5px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
