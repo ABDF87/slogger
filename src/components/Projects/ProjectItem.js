@@ -27,7 +27,7 @@ function ProjectItem(props) {
     isNewProject,
     project,
     projectUpHandler,
-    disabledOff,
+
     setDisabledOff,
   } = props;
 
