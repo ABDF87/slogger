@@ -9,8 +9,9 @@ import TaskDetails from './Details/TaskDetails';
 import Header from './Header';
 import styles from './Workspace.module.css';
 import useAuth from './hooks/useAuth';
-import { AiFillAmazonCircle } from 'react-icons/ai';
+
 let i = [];
+
 const Workspace = () => {
   const [projectItems, setProjectItem] = useState([]);
   const [tasksList, setTasksList] = useState([]);
@@ -19,7 +20,6 @@ const Workspace = () => {
   const [taskListName, setTaskListName] = useState('Here will be your tasks');
   const [detailName, setDetailName] = useState('Here will be your detail');
   const [changeProjectName, setChangeProjectName] = useState(true);
-  const [taskCritical, setTaskCritical] = useState('');
 
   const { auth } = useAuth();
 
@@ -287,14 +287,12 @@ const Workspace = () => {
           setDetailName={setDetailName}
           deleteTaskHandler={deleteTaskHandler}
           setProjectItem={setProjectItem}
-          setTaskCritical = {setTaskCritical}
         />
         <TaskDetails
           details={details}
           tasks={tasks}
           detailName={detailName}
           projectItems={projectItems}
-          taskCritical={taskCritical}
 
         />
       </div>

@@ -5,8 +5,6 @@ import styles from './DetailTextEditor.module.css';
 const DetailTextEditor = ({
   taskIdActive,
   projectIdActive,
-  detail,
-  detailName,
 }) => {
     
 const [detailPost, setDetailPost] = useState('');

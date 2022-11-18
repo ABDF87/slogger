@@ -13,7 +13,7 @@ function TaskListContainer(props) {
     taskListName,
     projectTime,
     setTask,
-    setTaskCritical
+    setTaskCritical,
   } = props;
   const [text, setText] = useState('');
   const [disabledOff, setDisabledOff] = useState(true);
@@ -30,7 +30,7 @@ function TaskListContainer(props) {
     event.preventDefault();
     tasks.map((task) => {
       if (task.taskname === text.trim()) {
-        setNameExist(true)
+        setNameExist(true);
         onSubmitHandler();
         return;
       }
@@ -38,7 +38,7 @@ function TaskListContainer(props) {
     if (text !== '' && disabledOff) {
       addTask(text);
       setText('');
-      setNameExist(false)
+      setNameExist(false);
     }
   };
   const preventSubmitHandler = (event) => {
@@ -75,9 +75,6 @@ function TaskListContainer(props) {
           onChange={(e) => setText(e.target.value)}
           placeholder={'add new task'}
         />
-        {/* <button  className ={text !== '' ? style.buttonTask : style.buttonTaskDeactive}  title='submit'>
-add task
-</button>  */}
 
         {disabledOff && text !== '' ? (
           <button className={style.buttonTask}>add task</button>
@@ -100,17 +97,14 @@ add task
                 deleteTaskHandler={deleteTaskHandler}
                 projectItems={projectItems}
                 taskIsActive={task.isActive}
-                taskIsCritical = {task.isCritical}
+                taskIsCritical={task.isCritical}
                 taskUpHandler={taskUpHandler}
                 setDisabledOff={setDisabledOff}
                 disabledOff={disabledOff}
-                setTaskCritical = {setTaskCritical}
-
               />
             )
         )}
       </div>
-      {/* {projectId} */}
     </div>
   );
 }

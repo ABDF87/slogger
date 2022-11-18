@@ -14,25 +14,18 @@ function ProjectItem(props) {
     projectItems,
     projectId,
     setTaskListName,
-    activeId,
     tasks,
     deleteProjectHandler,
-    detailRefreshHandle,
     setDetailName,
     projectIsActive,
     projectName,
-    setProjectItem,
-    changeProjectName,
-    setChangeProjectName,
     isNewProject,
     project,
     projectUpHandler,
-
     setDisabledOff,
   } = props;
 
   const [newProjectName, setNewProjectName] = useState('New Project');
-  const [nameToCompare, setNametoCompare] = useState('');
   const [changeModeOn, setChangeModeOn] = useState(true);
   const [buttonActive, setButtonActive] = useState(true);
   const [showWarning, setShowWarning] = useState(false);
@@ -70,6 +63,8 @@ function ProjectItem(props) {
     event.preventDefault();
   };
 
+
+  // Change name
   const changeName = async (event, id) => {
     //make project active
     makeProjectActive(projectItems, event);

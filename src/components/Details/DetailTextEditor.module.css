@@ -6,6 +6,8 @@
 }
 .textarea {
   margin: 10px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 11px;
   padding: 10px 10px;
   min-height: 14rem;
   resize: none;

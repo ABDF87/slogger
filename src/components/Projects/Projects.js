@@ -8,7 +8,6 @@ function Projects(props) {
     projectItems,
     setProjectItem,
     addProject,
-    makeActive,
     setTaskListName,
     tasks,
     deleteProjectHandler,

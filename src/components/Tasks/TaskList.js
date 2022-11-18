@@ -1,8 +1,5 @@
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import style from './TaskList.module.css';
 import TaskListContainer from './TaskListContainer';
-import TaskItem from './TaskItem';
 
 function TaskList({
   taskListName,
@@ -12,7 +9,7 @@ function TaskList({
   addTask,
   setDetailName,
   deleteTaskHandler,
-  setTaskCritical
+  setTaskCritical,
 }) {
   return (
     <div className={style.taskList}>
@@ -31,7 +28,7 @@ function TaskList({
                 taskListName={taskListName}
                 projectTime={project.timeproject}
                 setTask={setTask}
-                setTaskCritical = {setTaskCritical}
+                
               />
             )
         )}

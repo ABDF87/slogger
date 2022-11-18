@@ -19,9 +19,6 @@ function TaskItem({
   taskUpHandler,
   setDisabledOff,
   taskIsCritical,
-  disabledOff,
-  taskFormValue,
-  setTaskCritical,
 }) {
   const [editTaskNameOn, seteditTaskNameOn] = useState(true);
   const [newTaskName, setNewTaskName] = useState('new task');
@@ -30,8 +27,7 @@ function TaskItem({
 
   const controller = new AbortController();
   const axiosPrivate = useAxiosPrivate();
- 
-  
+
   let activeProjectId;
 
   projectItems.map((project) => {
@@ -39,13 +35,6 @@ function TaskItem({
       activeProjectId = project.projectid;
     }
   });
-
-  
-  // if (taskIsCritical && taskIsActive){
-  //   setTaskCritical('Critical')
-  // } else if (!taskIsCritical && taskIsActive){
-  //   setTaskCritical('')
-  // }
 
   const setChangeTaskNameMode = (event) => {
     event.preventDefault();
@@ -63,9 +52,6 @@ function TaskItem({
   };
 
   const onClickActive = (event) => {
-    //make task active
-    // makeTaskActive(tasks, event, activeProjectId);
-
     tasks.map((task) => {
       if (
         task.taskid === event.target.id &&
@@ -83,15 +69,9 @@ function TaskItem({
     tasks.map((task) => {
       if (event.target.id === task.taskid) {
         setDetailName(task.taskname);
-        // if(task.isCritical && task.isActive){
-        //         setTaskCritical('Critical')
-        //       }else{
-        //         setTaskCritical('')
-        //       }
       }
-     
     });
-    //  
+    //
   };
 
   useEffect(() => {
@@ -99,10 +79,7 @@ function TaskItem({
       tasks.map((task) => {
         if (task.isActive) {
           setDetailName(task.taskname);
-          if(task.isCritical) setTaskCritical('Critical')
         }
-        
-      
       });
       if (taskIsCritical === true) {
         setIsCritical(true);
@@ -146,11 +123,6 @@ function TaskItem({
   };
 
   const criticalTrueHandler = async (id) => {
-    console.log('Write true', isCritical);
-    console.log('ID', taskId);
-    // setTaskCritical('Critical')
-    console.log('setTaskCritical NOT empty');
-
     try {
       const response = await axiosPrivate.put('/tasks', {
         signal: controller.signal,
@@ -161,13 +133,8 @@ function TaskItem({
       console.error(err);
     }
   };
+
   const criticalFalseHandler = async (id) => {
-    console.log('Write false', isCritical);
-    console.log('ID', taskId);
-
-    // setTaskCritical('')
-    console.log('setTaskCritical empty');
-
     try {
       const response = await axiosPrivate.put('/tasks', {
         signal: controller.signal,
@@ -186,18 +153,13 @@ function TaskItem({
 
         if (isCritical === true) {
           setIsCritical(false);
-          setTaskCritical('')
 
-          console.log('falseWORKS');
-          console.log('isCritical', isCritical);
           criticalFalseHandler(event.target.id);
+          task.isCritical = false;
         } else if (isCritical === false) {
           setIsCritical(true);
-          setTaskCritical('Critical')
-
-          console.log('TrueWORKS'); 
-          console.log('isCritical', isCritical);
           criticalTrueHandler(event.target.id);
+          task.isCritical = true;
         }
       }
     });
@@ -208,7 +170,7 @@ function TaskItem({
       {editTaskNameOn && tasks.length > 0 ? (
         <>
           {!showWarning ? (
-            <div >
+            <div>
               <button
                 className={
                   taskIsActive ? style.taskNameItemActive : style.taskNameItem
@@ -219,32 +181,38 @@ function TaskItem({
                 {taskName}
 
                 <div className={style.optionsBar}>
-                  <AiOutlineEdit
-                    className={style.changeTaskNameButton}
-                    onClick={setChangeTaskNameMode}
-                  />
-                  <BiTrashAlt
-                    className={style.deleteTaskButton}
-                    onClick={() => {
-                      setShowWarning(true);
-                    }}
-                    id={taskId}
-                  />
-                  <BiArrowFromBottom
-                    className={style.ProjectDoneButton}
-                    onClick={() => {
-                      taskUpHandler(taskId);
-                    }}
-                    id={taskId}
-                  />
+                  <div className={style.optionsBarNoFlag}>
+                    <AiOutlineEdit
+                      className={style.changeTaskNameButton}
+                      onClick={setChangeTaskNameMode}
+                    />
+                    <BiTrashAlt
+                      className={style.deleteTaskButton}
+                      onClick={() => {
+                        setShowWarning(true);
+                      }}
+                      id={taskId}
+                    />
+                    <BiArrowFromBottom
+                      className={style.ProjectDoneButton}
+                      onClick={() => {
+                        taskUpHandler(taskId);
+                      }}
+                      id={taskId}
+                    />
+                  </div>
                   <div
-                    text='make critical'
+                    id={taskId}
+                    className={style.flagWrapper}
+                    onClick={criticalStatus}
+                  ></div>
+                  <BsFlagFill
                     id={taskId}
                     className={
                       isCritical ? style.criticalRed : style.criticalBlack
                     }
                     onClick={criticalStatus}
-                  ></div>
+                  />
                 </div>
               </button>
             </div>
@@ -296,7 +264,6 @@ function TaskItem({
         </form>
       )}
     </div>
-    // <button className={style.TaskItem} onClick={onClickActive} id={taskId}>{text}</button>
   );
 }
 
