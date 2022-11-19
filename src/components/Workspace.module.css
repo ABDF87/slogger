@@ -2,3 +2,14 @@
     display: flex;
     
 }
+
+
+@media screen and (max-width: 1050px){
+    .contentBox {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    
+}

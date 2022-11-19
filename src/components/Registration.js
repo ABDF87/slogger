@@ -57,7 +57,7 @@ function Registration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccess(true);
+ 
     try {
       const response = await axios.post(
         REGISTER_URL,
