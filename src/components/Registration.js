@@ -64,7 +64,7 @@ function Registration() {
         JSON.stringify({ user, pwd }),
         {
           headers: { 'Content-Type': 'application/json' },
-          headers: {'Access-control-Allow-Origin': '*'},
+          headers: {'Access-control-Allow-Origin': 'https://slogger.netlify.app'},
           withCredentials: true,
         }
       );
