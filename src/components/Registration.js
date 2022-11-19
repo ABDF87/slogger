@@ -63,10 +63,13 @@ function Registration() {
         REGISTER_URL,
         JSON.stringify({ user, pwd }),
         {
-          headers: { 'Content-Type': 'application/json' },
-          headers: {'Access-control-Allow-Origin': 'https://slogger.netlify.app'},
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+          },
           withCredentials: true,
         }
+     
       );
       setSuccess(true);
     } catch (err) {
