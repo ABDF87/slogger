@@ -64,6 +64,7 @@ function Registration() {
         JSON.stringify({ user, pwd }),
         {
           headers: { 'Content-Type': 'application/json' },
+          headers: {'Access-control-Allow-Origin': '*'},
           withCredentials: true,
         }
       );
