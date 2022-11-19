@@ -16,7 +16,7 @@ function OpeningWindow() {
             <p>
               <ul>
                 <li>Easy to use</li>
-                <li>Flaxible for projects of any level</li>
+                <li>Flеxible for projects of any level</li>
                 <li>Encrypted data storage</li>
               </ul>
             </p>

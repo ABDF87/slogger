@@ -40,7 +40,6 @@ app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 
 app.use(verifyJWT);
-app.use('/employees', require('./routes/api/employees'));
 app.use('/projects', require('./routes/api/projects'));
 app.use('/tasks', require('./routes/api/tasks'));
 app.use('/details', require('./routes/api/details'));
