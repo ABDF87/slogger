@@ -19,8 +19,20 @@ const ROLES = {
   'Admin': 5150,
 };
 
+
+
 function App() {
+
+  function Example() {
+    useEffect(() => {
+      document.title = 'Slogger';
+    }, []);
+  }
+  Example()
+  
   return (
+    <>
+    <title>Slogger</title>
     <Routes>
       <Route path='/' element={<Layout />}>
         {/* puplic routes */}
@@ -41,6 +53,7 @@ function App() {
         <Route path='*' element={<Missing />} />
       </Route>
     </Routes>
+    </>
   );
 }
 

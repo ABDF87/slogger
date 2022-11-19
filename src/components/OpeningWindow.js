@@ -8,7 +8,7 @@ function OpeningWindow() {
     <div className={style.openingWindow}>
       <div className={style.container}>
         <div className={style.titleWrapper}>
-          <h1 className={style.title}>Persister</h1>
+          <h1 className={style.title}>Slogger</h1>
           <p className={style.disclaimer}>
             Simple organizer for your projects.
           </p>
