@@ -37,6 +37,12 @@ app.use(cookieParser());
 //serve static files
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://slogger.netlify.app"); 
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
 app.use('/refresh', require('./routes/refresh'));
