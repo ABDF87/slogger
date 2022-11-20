@@ -66,21 +66,21 @@ app.all('*', (req, res) => {
   }
 });
 
-// mongoose.connection.once('open', () => {
-// http
-//   .createServer({
-//     key: fs.readFileSync("key.pem"),
-//     cert: fs.readFileSync("cert.pem"),
-//   },
-//   app)
-//   .listen(PORT, ()=>{
-//     console.log('server is runing at port 4000')
-//   });
-// });
-
 mongoose.connection.once('open', () => {
-  console.log('Connected to Mango DB');
-  app.listen(PORT, () => {
-    console.log('Server is startiing on port 3500');
+http
+  .createServer({
+    key: fs.readFileSync("key.pem"),
+    cert: fs.readFileSync("cert.pem"),
+  },
+  app)
+  .listen(PORT, ()=>{
+    console.log('server is runing at port 4000')
   });
 });
+
+// mongoose.connection.once('open', () => {
+//   console.log('Connected to Mango DB');
+//   app.listen(PORT, () => {
+//     console.log('Server is startiing on port 3500');
+//   });
+// });
