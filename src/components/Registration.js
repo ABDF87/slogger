@@ -78,9 +78,7 @@ function Registration() {
       } else {
         setErrMsg('Regestration Failed');
         console.log(err);
-        console.log(error.response.data);
-        console.log(error.response.headers);
-        console.log(error.response.status);
+        
       }
       errRef.current.focus();
     }
