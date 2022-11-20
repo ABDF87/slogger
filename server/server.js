@@ -37,11 +37,11 @@ app.use(cookieParser());
 //serve static files
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://slogger.netlify.app"); 
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "https://slogger.netlify.app"); 
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
@@ -66,21 +66,11 @@ app.all('*', (req, res) => {
   }
 });
 
+
+
 mongoose.connection.once('open', () => {
-http
-  .createServer({
-    key: fs.readFileSync("key.pem"),
-    cert: fs.readFileSync("cert.pem"),
-  },
-  app)
-  .listen(PORT, ()=>{
-    console.log('server is runing at port 4000')
+  console.log('Connected to Mango DB');
+  app.listen(PORT, () => {
+    console.log('Server is startiing on port 3500');
   });
 });
-
-// mongoose.connection.once('open', () => {
-//   console.log('Connected to Mango DB');
-//   app.listen(PORT, () => {
-//     console.log('Server is startiing on port 3500');
-//   });
-// });
