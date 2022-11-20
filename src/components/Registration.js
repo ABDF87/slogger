@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from '../Api/axios';
 import './Registration.css';
 
-
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,24}$/;
 const REGISTER_URL = '/register';
@@ -16,7 +15,6 @@ const REGISTER_URL = '/register';
 function Registration() {
   const userRef = useRef();
   const errRef = useRef();
- 
 
   const [user, setUser] = useState('');
   const [validName, setValidName] = useState(false);
@@ -45,7 +43,7 @@ function Registration() {
 
   useEffect(() => {
     const result = PWD_REGEX.test(pwd);
-  
+
     setValidPwd(result);
     const match = pwd === matchPwd;
     setValidMatch(match);
@@ -57,21 +55,19 @@ function Registration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     try {
       const response = await axios.post(
         REGISTER_URL,
         JSON.stringify({ user, pwd }),
         {
-          headers: { 
+          headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-
+            'Access-Control-Allow-Origin': 'http://localhost:3500',
           },
-          
+
           withCredentials: true,
         }
-     
       );
       setSuccess(true);
     } catch (err) {
@@ -90,10 +86,10 @@ function Registration() {
   return (
     <>
       {success ? (
-        <section className="registration__success">
+        <section className='registration__success'>
           <h1>Success! Now you can sign in</h1>
           <p>
-           <a href='/login'>Sign in </a>
+            <a href='/login'>Sign in </a>
           </p>
         </section>
       ) : (
