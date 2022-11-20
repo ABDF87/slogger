@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const https = require("https");
+const http = require("https");
 const fs = require("fs")
 const path = require('path');
 const cors = require('cors');
@@ -61,7 +61,7 @@ app.all('*', (req, res) => {
 });
 
 // mongoose.connection.once('open', () => {
-// https
+// http
 //   .createServer({
 //     key: fs.readFileSync("key.pem"),
 //     cert: fs.readFileSync("cert.pem"),
