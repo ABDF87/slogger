@@ -10,8 +10,7 @@ const corsOptions = {
     }
   },
   optionsSuccessStatus: 200,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  headers:'Access-Control-Allow-Origin: *'
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
 };
 
 module.exports = corsOptions;
