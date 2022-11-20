@@ -11,7 +11,7 @@ import './Registration.css';
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,24}$/;
-const REGISTER_URL = '/register';
+const REGISTER_URL = 'https://slogger.netlify.app/register';
 
 function Registration() {
   const userRef = useRef();
@@ -63,10 +63,7 @@ function Registration() {
         REGISTER_URL,
         JSON.stringify({ user, pwd }),
         {
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           withCredentials: true,
         }
      
