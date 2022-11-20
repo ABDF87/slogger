@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const https = require("https");
+const fs = require("fs")
 const path = require('path');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
@@ -58,8 +60,17 @@ app.all('*', (req, res) => {
   }
 });
 
-
-
+// mongoose.connection.once('open', () => {
+// https
+//   .createServer({
+//     key: fs.readFileSync("key.pem"),
+//     cert: fs.readFileSync("cert.pem"),
+//   },
+//   app)
+//   .listen(PORT, ()=>{
+//     console.log('server is runing at port 4000')
+//   });
+// });
 
 mongoose.connection.once('open', () => {
   console.log('Connected to Mango DB');
