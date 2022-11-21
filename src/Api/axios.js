@@ -1,7 +1,7 @@
 import axios from 'axios';
 const BASE_URL = 'http://localhost:3500';
 
-const axiosGeneral = axios.create({
+export default axios.create({
   baseURL: BASE_URL,
 });
 
@@ -11,4 +11,5 @@ export const axiosPrivate = axios.create({
   withCredentials: true,
 });
 
-export default axiosGeneral;
+
+

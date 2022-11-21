@@ -59,7 +59,7 @@ function Registration() {
     e.preventDefault();
 
     try {
-      const response = await axiosGeneral.post(
+      const response = await axios.post(
         REGISTER_URL,
         JSON.stringify({ user, pwd }),
         {
