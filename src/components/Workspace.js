@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import useAxiosPrivate from './hooks/useAxiosPrivate';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import axios from '../api/axios';
+import axios from '../Api/axios';
 import Projects from './Projects/Projects';
 import TaskList from './Tasks/TaskList';
 import TaskDetails from './Details/TaskDetails';
