@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = 'https://localhost:3500';
+const BASE_URL = 'https://slogger.netlify.app';
 
 export default axios.create({
     baseURL: BASE_URL
