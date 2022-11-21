@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { axiosPrivate } from '../api/axios';
+import axiosGeneral from '../api/axios';
 import {
   faCheck,
   faTimes,
@@ -58,7 +59,7 @@ function Registration() {
     e.preventDefault();
 
     try {
-      const response = await axiosPrivate.post(
+      const response = await axiosGeneral.post(
         REGISTER_URL,
         JSON.stringify({ user, pwd }),
         {
