@@ -63,9 +63,7 @@ function Registration() {
         {
           headers: {
             'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest'
           },
-
           withCredentials: true,
         }
       );
