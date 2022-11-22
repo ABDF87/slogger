@@ -12,6 +12,7 @@ const credentials = require('./middleware/credentials');
 const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 3500;
 const connectDB = require('./config/dbConn');
+require('dotenv').config();
 
 connectDB();
 
