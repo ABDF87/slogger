@@ -1,3 +1,3 @@
-const allowedOrigins = ['https://slogger.netlify.app', 'http://localhost:3000'];
+const allowedOrigins = ['https://slogger.netlify.app', 'https://slogger.onrender.com'];
 
 module.exports = allowedOrigins;
