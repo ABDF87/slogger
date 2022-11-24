@@ -78,20 +78,24 @@
   color: rgb(28, 29, 28);
   background: transparent;
   cursor: pointer;
-  border: none;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 4px;
   outline: none;
   margin-right: 10px;
 
 }
 
 .ProjectNameDoneIcon:hover {
-  color: rgb(87, 87, 87);
+  color: rgb(238, 236, 236);
+  background-color:rgb(28, 29, 28); ;
 }
 .ProjectNameDoneIconDisabled {
   color: rgb(142, 140, 142);
   background: transparent;
   cursor: pointer;
   padding: 2px;
+  border: none;
   outline: none;
   margin-right: 10px;
 }
@@ -102,7 +106,6 @@
   margin-left: 5px;
   color: rgb(248, 248, 248);
   transition: 500ms;
-
   margin-bottom: 5px;
   width: 90%;
   font-size: 16px;
