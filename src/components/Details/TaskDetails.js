@@ -20,6 +20,7 @@ function TaskDetails(props) {
 
   return (
     <div className={style.taskDetailsContainer}>
+     <div className={style.taskDetailsWrapper}>
       {details.map(
         (detail) =>
           detail.taskid === activeTaskId &&
@@ -35,6 +36,7 @@ function TaskDetails(props) {
             />
           )
       )}
+      </div>
     </div>
   );
 }

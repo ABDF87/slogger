@@ -1,9 +1,11 @@
 .projectsContainer {
+  display: flex;
+  flex-direction: column;
   width: 23%;
   height: 96vh;
   background-color: rgb(237, 235, 235);
   border: 1px solid rgb(222, 221, 221);
-  overflow:scroll;
+  overflow: scroll;
 }
 .projectHeader {
   padding-top: 20px;
@@ -16,8 +18,8 @@
 }
 
 .addProjectButton {
-  
-margin-left: 7rem;
+  width: 10rem;
+  margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 10px 20px;
@@ -35,7 +37,7 @@ margin-left: 7rem;
     rgba(218, 97, 224, 1) 96%
   );
 }
-.addProjectButtonOff{
+.addProjectButtonOff {
   margin-left: 7rem;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -63,3 +65,17 @@ margin-left: 7rem;
   cursor: pointer;
   color: rgb(202, 206, 206);
 }
+
+@media screen and (max-width: 768px) {
+  .projectsContainer {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    background-color: rgb(237, 235, 235);
+    border: 1px solid rgb(222, 221, 221);
+    overflow: scroll;
+  }
+}
+
+
+

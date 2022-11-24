@@ -1,6 +1,6 @@
 .signUpScreen{
     width: 20rem;
-    margin: 8rem auto;
+    margin: 2rem auto;
     
 }
 .registration__success{
@@ -129,3 +129,14 @@ input::placeholder{
 span{
     background: transparent;
 }
+
+@media screen and (max-width: 768px) {
+    .signUpScreen {
+      width: 90%;
+    }
+    .formContainer {
+      display: flex;
+      width: 100%;
+    }
+  }
+  

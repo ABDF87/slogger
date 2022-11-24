@@ -166,7 +166,7 @@ function TaskItem({
   };
 
   return (
-    <div>
+    <div className={style.taskItemWrapper}>
       {editTaskNameOn && tasks.length > 0 ? (
         <>
           {!showWarning ? (

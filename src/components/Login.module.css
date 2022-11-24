@@ -10,7 +10,6 @@
 .signInScreen {
   width: 20%;
   margin: 9rem auto;
- 
 }
 .formContainer {
   width: 100%;
@@ -82,4 +81,14 @@ input::placeholder {
 .needAccount {
   font-size: 14px;
   color: rgb(48, 47, 47);
+}
+
+@media screen and (max-width: 768px) {
+  .signInScreen {
+    width: 90%;
+  }
+  .formContainer {
+    display: flex;
+    width: 100%;
+  }
 }

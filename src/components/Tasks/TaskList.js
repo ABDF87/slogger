@@ -13,7 +13,6 @@ function TaskList({
 }) {
   return (
     <div className={style.taskList}>
-      <div>
         {projectItems.map(
           (project) =>
             project.isActive && (
@@ -32,7 +31,6 @@ function TaskList({
               />
             )
         )}
-      </div>
     </div>
   );
 }

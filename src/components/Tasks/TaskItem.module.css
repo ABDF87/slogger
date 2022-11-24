@@ -4,13 +4,13 @@
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 5px;
-  width: 100%;
+  width: 80%;
   border: none;
   outline: none;
   text-align: left;
   cursor: pointer;
   background-color: transparent;
-  overflow: hidden;
+  overflow: scroll;
 }
 .TaskItemButton:hover {
   background-color: rgb(225, 223, 223);
@@ -25,7 +25,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
-  width: 80%;
+  width: 100%;
   font-size: 16px;
   text-align: left;
   padding: 10px 5px 8px 10px;
@@ -45,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
-  width: 80%;
+  width: 100%;
   font-size: 16px;
   text-align: left;
   padding: 10px 5px 9px 10px;
@@ -161,4 +161,45 @@
   cursor: pointer;
   margin-left: 5px;
   margin-top: 2px;
+}
+
+@media screen and (max-width: 768px){
+  .taskNameItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 5px 8px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(170, 168, 170);
+    color: aliceblue;
+    overflow: hidden;
+  }
+
+.taskNameItemActive {
+  margin-left: 0px;
+  color: rgb(61, 60, 60);
+  transition: 500ms;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 5px 9px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(213, 216, 213);
+  overflow: hidden;
+}
+
 }

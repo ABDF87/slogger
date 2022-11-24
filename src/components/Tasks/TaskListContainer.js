@@ -61,6 +61,7 @@ function TaskListContainer(props) {
 
   return (
     <div className={style.taskContainer} id={projectId}>
+      <div className={style.taskContainerWrapper}>
       <div className={style.taskListTitle}>{taskListName}</div>
       <div className={style.projectTime}>created: {projectTime}</div>
 
@@ -104,6 +105,7 @@ function TaskListContainer(props) {
               />
             )
         )}
+      </div>
       </div>
     </div>
   );

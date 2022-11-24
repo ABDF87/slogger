@@ -231,6 +231,7 @@ function ProjectItem(props) {
               onChange={changeName}
               id={projectId}
               value={projectName}
+              placeholder = "add project name"
               autoFocus
             />
 

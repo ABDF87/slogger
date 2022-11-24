@@ -1,25 +1,32 @@
 
 .openingWindow {
   display: flex;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-color: rgb(235, 235, 235);
+ 
+
 }
 .container {
   display: flex;
   margin-top: 20px;
   align-items: baseline;
   margin-left: 20%;
+
 }
 
 .titleWrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  
 }
 .registerWrapper {
   margin-left: 15rem;
-
+ 
 }
+
 .title {
   margin-bottom: 5px;
 }
@@ -38,4 +45,43 @@
 
 li{
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .openingWindow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+  }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    .titleWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      
+    }
+    .registerWrapper {
+      margin-left: 0;
+      width: 100%;
+    }
+   
+
+    .title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+
+  
 }

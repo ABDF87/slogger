@@ -3,13 +3,19 @@
     
 }
 
-
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 768px){
     .contentBox {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;  
+        margin: 0;
+        padding: 0;
         
     }
 
+    
+
+    
+}
+@media screen and (max-width: 390px){
     
 }
