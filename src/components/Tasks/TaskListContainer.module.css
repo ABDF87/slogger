@@ -4,6 +4,7 @@
   height: auto;
   background-color: rgb(237, 235, 235);
 }
+
 .taskListTitle {
   display: block;
   text-align: left;
@@ -17,26 +18,40 @@
   outline: none;
   background-color: rgb(237, 235, 235);
 }
+.formWrapper {
+  display: flex;
+  justify-content:space-between;
+  width: 110%;
+  margin-bottom: 20px;
+}
+
+.inputWrapper {
+  width: 80%;
+  margin-right: 10px;
+}
+.buttonWrapper {
+  width:30%;
+}
+
 .inputField {
-  width: 70%;
-  padding: 10px;
-  font-size: 16px;
+  width: 100%;
+  padding:10px 0px 10px 5px;
+  margin-right: 5px;
   background-color: rgb(55, 47, 47);
   border-radius: 4px;
   border: none;
   outline: none;
   color: #fff;
 }
+
 .inputField::placeholder {
+  padding-left: 5px;
   font-size: 14px;
+  background-color: rgb(55, 47, 47);
+  color: rgb(210, 209, 209);
 }
 
-.formTask {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
+
 .buttonTask {
   cursor: pointer;
   padding: 10px 15px;
@@ -71,6 +86,11 @@
   );
 }
 
+.nameExist{
+  margin-bottom: 20px;
+  color: rgb(206, 4, 4);
+  font-size: 14px;
+}
 .projectTime {
   color: rgb(117, 116, 116);
   font-size: 11px;
@@ -78,33 +98,28 @@
 }
 
 
-  .formTask {
+
+
+
+@media screen and (max-width: 1000px) {
+  .taskContainer {
+    margin: 20px 0px;
     width: 100%;
+    height: auto;
+    background-color: rgb(237, 235, 235);
+  }
+  .taskContainerWrapper {
+    padding: 0 20px;
+  }
+  .formWrapper {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
-  }
-  .inputField {
+    justify-content: space-between;
     width: 100%;
-    padding: 10px 0px;
-    font-size: 16px;
-    background-color: rgb(55, 47, 47);
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    color: #fff;
-  }
-  .inputField::placeholder {
-    width: 100%;
-    padding-left: 5px;
-    font-size: 14px;
-    background-color: rgb(55, 47, 47);
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    color: #fff;
   }
   .buttonTask {
+    position: relative;
+    bottom: 1px;
     width: 100%;
     margin-top: 5px;
     cursor: pointer;
@@ -125,7 +140,6 @@
   .buttonTaskDeactive {
     cursor: pointer;
     width: 100%;
-    margin-top: 5px;
     padding: 10px 15px;
     background-color: #fff;
     border: none;
@@ -141,17 +155,22 @@
     );
   }
 
-
-@media screen and (max-width: 768px){
-
-  .taskContainer {
-    margin: 20px 0px;
-    
+  .inputWrapper {
     width: 100%;
-    height: auto;
-    background-color: rgb(237, 235, 235);
+    margin-bottom: 6px;
   }
-  .taskContainerWrapper{
-    padding: 0 20px;
+
+  .inputField {
+    width: 100%;
+    padding:10px 0px 10px 0px;
+    font-size: 16px;
+    background-color: rgb(55, 47, 47);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+  .buttonWrapper {
+    width: 100%;
   }
 }

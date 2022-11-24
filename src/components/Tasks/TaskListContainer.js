@@ -62,50 +62,56 @@ function TaskListContainer(props) {
   return (
     <div className={style.taskContainer} id={projectId}>
       <div className={style.taskContainerWrapper}>
-      <div className={style.taskListTitle}>{taskListName}</div>
-      <div className={style.projectTime}>created: {projectTime}</div>
+        <div className={style.taskListTitle}>{taskListName}</div>
+        <div className={style.projectTime}>created: {projectTime}</div>
 
-      <form
-        className={style.formTask}
-        onSubmit={disabledOff ? onSubmitHandler : preventSubmitHandler}
-      >
-        <input
-          className={style.inputField}
-          type='text'
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder={'add new task'}
-        />
-
-        {disabledOff && text !== '' ? (
-          <button className={style.buttonTask}>add task</button>
-        ) : (
-          <button className={style.buttonTaskDeactive}> add task</button>
-        )}
-        {nameExist && <div>Name already exist</div>}
-      </form>
-      <div>
-        {reversedTasks.map(
-          (task) =>
-            activeProjectId === task.projectid && (
-              <TaskItem
-                taskName={task.taskname}
-                tasks={tasks}
-                taskId={task.taskid}
-                key={task.taskid}
-                taskFormValue={text}
-                setDetailName={setDetailName}
-                deleteTaskHandler={deleteTaskHandler}
-                projectItems={projectItems}
-                taskIsActive={task.isActive}
-                taskIsCritical={task.isCritical}
-                taskUpHandler={taskUpHandler}
-                setDisabledOff={setDisabledOff}
-                disabledOff={disabledOff}
+        <form
+          className={style.formTask}
+          onSubmit={disabledOff ? onSubmitHandler : preventSubmitHandler}
+        >
+          <div className={style.formWrapper}>
+            <div className={style.inputWrapper}>
+              <input
+                className={style.inputField}
+                type='text'
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder={'add new task'}
               />
-            )
-        )}
-      </div>
+            </div>
+            <div className={style.buttonWrapper}>
+              {disabledOff && text !== '' ? (
+                <button className={style.buttonTask}>add task</button>
+              ) : (
+                <button className={style.buttonTaskDeactive}> add task</button>
+              )}
+            </div>
+          </div>
+          {nameExist && <div className={style.nameExist}>Name already exist</div>}
+        </form>
+
+        <div>
+          {reversedTasks.map(
+            (task) =>
+              activeProjectId === task.projectid && (
+                <TaskItem
+                  taskName={task.taskname}
+                  tasks={tasks}
+                  taskId={task.taskid}
+                  key={task.taskid}
+                  taskFormValue={text}
+                  setDetailName={setDetailName}
+                  deleteTaskHandler={deleteTaskHandler}
+                  projectItems={projectItems}
+                  taskIsActive={task.isActive}
+                  taskIsCritical={task.isCritical}
+                  taskUpHandler={taskUpHandler}
+                  setDisabledOff={setDisabledOff}
+                  disabledOff={disabledOff}
+                />
+              )
+          )}
+        </div>
       </div>
     </div>
   );

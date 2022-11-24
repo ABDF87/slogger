@@ -81,17 +81,17 @@
   border: none;
   outline: none;
   margin-right: 10px;
-  z-index: 5;
+
 }
 
 .ProjectNameDoneIcon:hover {
   color: rgb(87, 87, 87);
 }
 .ProjectNameDoneIconDisabled {
-  color: rgb(219, 34, 219);
+  color: rgb(142, 140, 142);
   background: transparent;
   cursor: pointer;
-  border: none;
+  padding: 2px;
   outline: none;
   margin-right: 10px;
 }
