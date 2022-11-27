@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import style from './OpeningWindow.module.css';
-import Registration from './Registration';
+import Registration from './Auth/Registration';
 
 function OpeningWindow() {
 

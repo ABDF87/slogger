@@ -6,7 +6,7 @@ import axios from '../Api/axios';
 import Projects from './Projects/Projects';
 import TaskList from './Tasks/TaskList';
 import TaskDetails from './Details/TaskDetails';
-import Header from './Header';
+import Header from './Header/Header';
 import styles from './Workspace.module.css';
 import useAuth from './hooks/useAuth';
 
