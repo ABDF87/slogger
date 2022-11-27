@@ -1,0 +1,179 @@
+.taskContainer {
+  margin: 20px 0px;
+  width: 100%;
+  height: auto;
+  background-color: rgb(237, 235, 235);
+}
+
+.taskListTitle {
+  display: block;
+  text-align: left;
+  align-items: left;
+  left: 0;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  color: rgb(87, 87, 87);
+  border: none;
+  outline: none;
+  background-color: rgb(237, 235, 235);
+}
+.formWrapper {
+  display: flex;
+  justify-content:space-between;
+  width: 110%;
+  margin-bottom: 20px;
+}
+
+.inputWrapper {
+  width: 80%;
+  margin-right: 10px;
+}
+.buttonWrapper {
+  width:30%;
+}
+
+.inputField {
+  width: 100%;
+  padding:10px 0px 10px 5px;
+  margin-right: 5px;
+  background-color: rgb(55, 47, 47);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.inputField::placeholder {
+  padding-left: 5px;
+  font-size: 14px;
+  background-color: rgb(55, 47, 47);
+  color: rgb(210, 209, 209);
+}
+
+
+.buttonTask {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+  background: rgb(22, 79, 204);
+  background: linear-gradient(
+    90deg,
+    rgba(22, 79, 204, 1) 6%,
+    rgba(189, 9, 162, 1) 65%,
+    rgba(218, 97, 224, 1) 96%
+  );
+}
+
+.buttonTaskDeactive {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+  background: rgb(22, 79, 204);
+  background: linear-gradient(
+    90deg,
+    rgb(75, 114, 198) 6%,
+    rgb(188, 93, 174) 65%,
+    rgb(218, 129, 223) 96%
+  );
+}
+
+.nameExist{
+  margin-bottom: 20px;
+  color: rgb(206, 4, 4);
+  font-size: 14px;
+}
+.projectTime {
+  color: rgb(117, 116, 116);
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .taskContainer {
+    margin: 20px 0px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(237, 235, 235);
+  }
+  .taskContainerWrapper {
+    padding: 0 20px;
+  }
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .buttonTask {
+    position: relative;
+    bottom: 1px;
+    width: 100%;
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    background: rgb(22, 79, 204);
+    background: linear-gradient(
+      90deg,
+      rgba(22, 79, 204, 1) 6%,
+      rgba(189, 9, 162, 1) 65%,
+      rgba(218, 97, 224, 1) 96%
+    );
+  }
+  .buttonTaskDeactive {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    background: rgb(22, 79, 204);
+    background: linear-gradient(
+      90deg,
+      rgb(75, 114, 198) 6%,
+      rgb(188, 93, 174) 65%,
+      rgb(218, 129, 223) 96%
+    );
+  }
+
+  .inputWrapper {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .inputField {
+    width: 100%;
+    padding:10px 0px 10px 0px;
+    font-size: 16px;
+    background-color: rgb(55, 47, 47);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+  .inputField[type=text]{
+    text-indent:15px;
+  }
+  .buttonWrapper {
+    width: 100%;
+  }
+}
