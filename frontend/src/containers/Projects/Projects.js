@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import style from './Projects.module.css';
 import ProjectItem from './ProjectItem';
-import TaskListContainer from '../Tasks/TaskListContainer';
 
 function Projects(props) {
   const {

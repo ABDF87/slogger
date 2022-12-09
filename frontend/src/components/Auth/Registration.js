@@ -1,12 +1,11 @@
 import { useRef, useState, useEffect } from 'react';
-import { axiosPrivate } from '../../Api/axios';
-import axiosGeneral from '../../Api/axios';
 import {
   faCheck,
   faTimes,
   faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import axios from '../../Api/axios';
 import './Registration.css';
 

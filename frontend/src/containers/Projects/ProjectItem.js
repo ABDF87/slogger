@@ -1,11 +1,10 @@
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BiArrowFromBottom } from 'react-icons/bi';
-import { MdOutlineDone } from 'react-icons/md';
 import { BiTrashAlt } from 'react-icons/bi';
-import { MdDone } from 'react-icons/md';
 import { useEffect, useState } from 'react';
-import useAxiosPrivate from '../hooks/useAxiosPrivate';
-import { makeProjectActive } from '../util/utils';
+
+import useAxiosPrivate from '../../hooks/useAxiosPrivate';
+import { makeProjectActive } from '../../components/util/utils';
 import style from './ProjectItem.module.css';
 
 function ProjectItem(props) {

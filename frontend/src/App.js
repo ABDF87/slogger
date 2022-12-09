@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import loginWindow from './components/Auth/Login.module.css';
+import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
-import Workspace from './components/Workspace';
+import Workspace from './containers/workplace/Workspace';
 import Login from './components/Auth/Login';
 import Registration from './components/Auth/Registration';
 import Unauthorized from './components/Auth/Unauthorized';
-import OpeningWindow from './components/OpeningWindow';
-import Missing from './components/Missing';
-import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
+import OpeningWindow from './containers/opening/OpeningWindow';
+import Missing from './components/Auth/Missing';
+import Layout from './routs/Layout';
 import RequireAuth from './components/Auth/RequireAuth';
 import PersistLogin from './components/Auth/PersistLogin';
 

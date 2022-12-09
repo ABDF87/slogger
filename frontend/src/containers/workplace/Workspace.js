@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
-import useAxiosPrivate from './hooks/useAxiosPrivate';
+import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import axios from '../Api/axios';
-import Projects from './Projects/Projects';
-import TaskList from './Tasks/TaskList';
-import TaskDetails from './Details/TaskDetails';
-import Header from './Header/Header';
+import Projects from '../Projects/Projects';
+import TaskList from '../Tasks/TaskList';
+import TaskDetails from '../Details/TaskDetails';
+import Header from '../Header/Header';
 import styles from './Workspace.module.css';
-import useAuth from './hooks/useAuth';
+import useAuth from '../../hooks/useAuth';
 
 let i = [];
 

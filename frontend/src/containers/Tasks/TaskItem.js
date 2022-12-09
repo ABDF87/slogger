@@ -4,9 +4,9 @@ import { BiArrowFromBottom } from 'react-icons/bi';
 import { BiTrashAlt } from 'react-icons/bi';
 import { BsFlagFill } from 'react-icons/bs';
 import { MdDone } from 'react-icons/md';
-import useAxiosPrivate from '../hooks/useAxiosPrivate';
+import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 import style from './TaskItem.module.css';
-import { makeTaskActive } from '../util/utils';
+import { makeTaskActive } from '../../components/util/utils';
 
 function TaskItem({
   projectItems,
