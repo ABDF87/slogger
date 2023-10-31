@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Nunito+Sans:opsz@6..12&display=swap');
 .projectItem {
+  width: 100%;
   background-color: rgb(237, 235, 235);
+}
+
+.projectButton {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
 }
 
 .projectButton:hover {
@@ -26,6 +33,7 @@
 }
 
 .inputProjectName {
+  width: auto;
   font-size: 16px;
   border: none;
   outline: none;
@@ -42,53 +50,53 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
   width: 100%;
   font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
   text-align: left;
-  padding: 10px 5px 8px 10px;
+  padding: 20px 8px 18px 20px;
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 4px;
   background-color: rgb(170, 168, 170);
   color: aliceblue;
   position: relative;
+  border-bottom: 1px solid rgb(151, 150, 150);
 }
 .projectNameItemActive {
-  margin-left: 10px;
-  color: rgb(61, 60, 60);
-  transition: 500ms;
   display: flex;
   justify-content: space-between;
+  text-align: left;
   align-items: center;
-  margin-bottom: 5px;
+  color: rgb(61, 60, 60);
+  transition: 500ms;
   width: 100%;
   font-size: 16px;
-  text-align: left;
-  padding: 10px 5px 9px 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 20px 8px 20px 20px;
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 4px;
-  background-color: rgb(213, 216, 213);
+  background-color: rgb(213, 214, 216);
+}
+
+.projectNameItem:hover {
+  background-color: rgb(186, 186, 187);
 }
 
 .ProjectNameDoneIcon {
   color: rgb(28, 29, 28);
   background: transparent;
   cursor: pointer;
-  padding: 3px;
+  padding: 3px 5px;
   border: 1px solid black;
-  border-radius: 4px;
   outline: none;
-  margin-right: 10px;
-
+  margin-right: 30px;
 }
 
 .ProjectNameDoneIcon:hover {
   color: rgb(238, 236, 236);
-  background-color:rgb(28, 29, 28); ;
+  background-color: rgb(28, 29, 28);
 }
 .ProjectNameDoneIconDisabled {
   color: rgb(142, 140, 142);
@@ -97,23 +105,21 @@
   padding: 2px;
   border: none;
   outline: none;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 .deleteContainer {
   display: flex;
   justify-content: center;
-  margin-left: 5px;
   color: rgb(248, 248, 248);
   transition: 500ms;
-  margin-bottom: 5px;
-  width: 90%;
+  width: auto;
   font-size: 16px;
-  padding: 10px 5px 9px 10px;
+  padding: 20px 5px 18px 10px;
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 4px;
+
   background-color: rgb(60, 59, 59);
 }
 
@@ -126,39 +132,59 @@
 }
 
 @media screen and (max-width: 768px) {
+  .projectItem {
+    width: 100%;
+    background-color: rgb(237, 235, 235);
+  }
   .projectNameItem {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
-    width: 100%;
+
+    width: 90%;
     font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
     text-align: left;
+    margin: 0 auto;
+    margin-bottom: 5px;
     padding: 10px 5px 8px 10px;
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: 4px;
     background-color: rgb(170, 168, 170);
     color: aliceblue;
     position: relative;
   }
   .projectNameItemActive {
     display: flex;
-    justify-content: space-between;
     color: rgb(61, 60, 60);
     transition: 500ms;
     margin-left: 0;
     align-items: center;
+    margin: 0 auto;
     margin-bottom: 5px;
-    width: 100%;
+    width: 90%;
     font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
     text-align: left;
     padding: 10px 5px 9px 10px;
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: 4px;
     background-color: rgb(213, 216, 213);
+  }
+  .deleteContainer {
+    display: flex;
+    justify-content: center;
+    color: rgb(248, 248, 248);
+    transition: 500ms;
+    width: 90%;
+    font-size: 16px;
+    padding: 10px 5px 9px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(60, 59, 59);
+    margin:0 auto;
+    margin-bottom: 5px;
   }
 }

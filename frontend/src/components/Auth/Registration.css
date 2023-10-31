@@ -1,7 +1,6 @@
 .signUpScreen{
     width: 20rem;
-    margin: 2rem auto;
-    
+    margin: 100px auto;  
 }
 .registration__success{
     display: flex;

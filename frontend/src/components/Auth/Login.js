@@ -27,7 +27,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+console.log('login attempt')
     try {
       const response = await axios.post(
         LOGIN_URL,
@@ -37,6 +37,7 @@ function Login() {
           withCredentials: true,
         }
       );
+      console.log(response)
       
       const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
@@ -57,7 +58,9 @@ function Login() {
       } else if (err.response?.status === 401) {
         setErrMsg('Unauthorized');
       } else {
-        setErrMsg('Login Failed');
+      
+        setErrMsg('Login Failed', err);
+        console.log(err)
       }
       errRef.current.focus();
     }

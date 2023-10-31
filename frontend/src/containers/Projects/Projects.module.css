@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Nunito+Sans:opsz@6..12&display=swap');
+
 .projectsContainer {
   display: flex;
   flex-direction: column;
@@ -25,6 +27,7 @@
   padding: 10px 20px;
   border-radius: 4px;
   font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
   cursor: pointer;
   color: rgb(250, 251, 251);
   background-color: rgb(237, 235, 235);
@@ -58,7 +61,7 @@
   );
 }
 .projectList {
-  padding: 10px 20px;
+  padding: 10px 0px;
   background-color: rgb(237, 235, 235);
 }
 
@@ -69,12 +72,25 @@
 
 @media screen and (max-width: 768px) {
   .projectsContainer {
-    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
     height: 100%;
     padding-bottom: 20px;
     background-color: rgb(237, 235, 235);
     border: 1px solid rgb(222, 221, 221);
     overflow: scroll;
+  }
+  .projectList {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+
+    width: 100%;
+    
+ 
   }
 }
 

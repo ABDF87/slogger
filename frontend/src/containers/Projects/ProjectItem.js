@@ -204,7 +204,7 @@ function ProjectItem(props) {
             </div>
           ) : (
             <div className={style.deleteContainer}>
-              <p>Delete project?</p>
+              <span>Delete project?</span>
               <button id={projectId} onClick={deleteProject}>
                 Yes
               </button>
